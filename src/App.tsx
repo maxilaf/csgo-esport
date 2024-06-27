@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/App.css";
+import MatchDiv from "./components/MatchDiv";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <main>
         <section className="section-getMatch">
           <h1 className="titre-site">CS-GO match e-sport</h1>
-          <div className="getMatch"></div>
+          <MatchDiv />
         </section>
       </main>
       <footer></footer>

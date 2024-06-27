@@ -64,9 +64,12 @@ header div, header a {
   font-family: counter-strike;
   font-size: 50px;
   margin: auto;
-  padding-top: 50px;
+  padding: 50px 0 30px 0;
 }
 
 .getMatch {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
   
 }
