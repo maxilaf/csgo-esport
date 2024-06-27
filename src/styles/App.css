@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: counter-strike;
+  src: url(../fonts/cs_regular.ttf);
+}
+
+header {
+  font-size: 30px;
+  box-shadow: 0px 6px 25px rgba(216, 214, 214, 0.5);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+}
+
+header div, header a {
+  margin: auto;
+}
+
+
+.logo {
+  width: 300px;
+  font-family: counter-strike;
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+  text-align: start;
+
+}
+
+.header__titre {
+  margin: 18px;
+  font-size: 35px;
+  font-family: counter-strike;
+}
+
+.name {
+  width: 300px;
+  display: inline-block;
+  margin-right: 20px;
+  text-align: end;
+  font-weight: bold;
+}
+
+
+
+.section-getMatch {
+  /* background-image: url("https://media.steampowered.com/apps/csgo/blog/images/fb_image.png?v=6"); */
+  background-image: url("../img/img-fondtransparent-csgo.png");
+  background-size: cover;
+  background-position: center;
+  height: 603px;
+  color: white;
+}
+
+.titre-site {
+  font-family: counter-strike;
+  font-size: 50px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.getMatch {
+  
+}
