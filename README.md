@@ -54,6 +54,7 @@ source .env/Scripts/activate
 Installer ensuite les **librairies PIP** :
 ```
 pip install flask
+pip install flask_cors
 pip install hltv-async-api
 ```
 
