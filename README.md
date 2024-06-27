@@ -10,7 +10,7 @@ Voici le site CSGO-ESPORT réaliser en:
 
 Ouvrir un terminal dans le dossier ou vous souhaitez cloner le dépot GIT puis cloner le projet avec l'URL HTTP du projet :
 ```
-https://github.com/maxilaf/csgo-esport.git
+git clone https://github.com/maxilaf/csgo-esport.git
 ```
 
 ## La partie FRONT-END
