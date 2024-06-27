@@ -72,5 +72,6 @@ Puis lancez l'API (la partie front-end) :
 ```
 # flask --debug run
 ```
+(si ça ne marche pas esseyez `flask --app app --debug run`)
 
 ou directement sur le bouton `run` (forme de triangle sur le coté) en haut de VSCODE
