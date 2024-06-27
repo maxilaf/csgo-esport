@@ -66,6 +66,14 @@ Puis lancer le serveur local qui contiendra le site React (la partie front-end)
 ```
 npm start run
 ```
+Si le port `localhost:3000` est déja pris, vous pouvez :
+- mettre le site sur le port `localhost:3001`
+- Fermer le port `localhost:3000` :
+```
+netstat -ano | findstr :3000
+taskkill /PID [nombre] /F
+```
+en remplaçant `[nombre]` par la suite de chiffre de la dernière colonne.
 
 ### *Lancer l'API*
 Ouvrez un nouveau terminal dans le dossier server (`cd server` si vous etes à la racine du projet). <br>
