@@ -6,7 +6,9 @@ function App() {
   return (
     <section className="App" id="ancre-hautdepage">
       <header>
-        <a className="logo logo-titre" href="#ancre-hautdepage">CS-GO</a>
+        <a className="logo logo-titre" href="#ancre-hautdepage">
+          CS:GO
+        </a>
         <div className="header__titre logo-titre">match e-sport</div>
         <div className="name">
           <span className="name__prenom">Maximilien </span>
@@ -15,7 +17,7 @@ function App() {
       </header>
       <main>
         <section className="section-getMatch">
-          <h1 className="titre-site">CS-GO match e-sport</h1>
+          <h1 className="titre-site">CS:GO match e-sport</h1>
           <MatchDiv />
         </section>
       </main>

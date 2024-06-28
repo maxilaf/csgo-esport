@@ -1,10 +1,7 @@
 export default function MatchDiv() {
+  // states
 
-  // states  
-
-  
   // comportements
-
 
   // affichage
   return (
