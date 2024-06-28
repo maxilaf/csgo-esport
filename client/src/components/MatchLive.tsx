@@ -1,11 +1,27 @@
+import { MatchLiveType } from "./MatchForm";
 
-export default function() {
-    // state
+type MatchLiveProps = {
+  matchLive: MatchLiveType;
+};
 
-    // comportement
+export default function ({ matchLive }: MatchLiveProps) {
+  // state
 
-    // affichage
-    return (
-        <h1>titre</h1>
-    );
+  // comportement
+
+  // affichage
+  return (
+    <li>
+      <a>
+        {/*onClick={displayMatch}>*/}
+        <div className="li__event">
+          <div>event</div>
+          <div>{matchLive.event}</div>
+        </div>
+        <div className="li__score">
+          {matchLive.team1 + " V/S " + matchLive.team2}
+        </div>
+      </a>
+    </li>
+  );
 }

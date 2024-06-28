@@ -1,3 +1,8 @@
+
+import MatchForm from "./MatchForm";
+import Match from "./Match";
+
+
 export default function MatchDiv() {
   // states
 
@@ -6,7 +11,8 @@ export default function MatchDiv() {
   // affichage
   return (
     <div className="getMatch">
-      <p>AAQQQQQQQQQQ</p>
+      <MatchForm />
+      <Match />
     </div>
   );
 }
