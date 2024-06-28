@@ -30,7 +30,30 @@ export default function MatchForm({ displayMatch } : MatchFormProps) {
       .then((response) => response.json())
       .then((data) => {
         if (data.lenght !== 0) {
-          setMatchesLive(data);
+          setMatchesLive([...data, {
+            id: "2373265",
+            date: "28-06-2024",
+            time: "11:30",
+            team1: "MOi",
+            team2: "toi et tt",
+            t1_id: "12740",
+            t2_id: "12415",
+            maps: "3",
+            rating: 0,
+            event: "Skyesports Championship 2024 India Closed Qualifier"
+          }, {
+            id: "2373265",
+            date: "28-06-2024",
+            time: "11:30",
+            team1: "X",
+            team2: "Y et tt",
+            t1_id: "12740",
+            t2_id: "12415",
+            maps: "3",
+            rating: 0,
+            event: "Skyesports Championship 2024 India Closed Qualifier"
+          }
+          ]);
         } else {
           setMatchesLive(null);
         }
@@ -54,7 +77,7 @@ export default function MatchForm({ displayMatch } : MatchFormProps) {
       );
     } else {
       return (
-        <ul>
+        <ul className="matchForm__liste">
           {matchesLive?.map((matchLive: MatchLiveType) => {
             return <MatchLive key={matchLive.id} matchLive={matchLive} displayMatch={displayMatch} />;
           })}
@@ -65,5 +88,5 @@ export default function MatchForm({ displayMatch } : MatchFormProps) {
 
   // affichage
 
-  return <div>{afficherMatchLive()}</div>;
+  return <div className="matchForm">{afficherMatchLive()}</div>;
 }

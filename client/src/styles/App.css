@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgba(41, 71, 206, 0.664);
 }
 
 @font-face {
@@ -71,6 +72,75 @@ header div, header a {
 .getMatch {
   background-color: white;
   color: black;
-  border-radius: 20px;
-  
+  border-radius: 10px;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+.matchForm {
+  background-color: black;
+  margin: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+.matchForm__liste {
+  list-style-type: none;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.matchForm__liste li {
+  background-color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 0px 6px 25px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.matchForm__liste li a {
+  cursor: pointer;
+  width: 100%;
+}
+
+.li__div {
+  margin: 10px;
+}
+
+.li__score {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2px;
+  margin-top: 3px;
+}
+
+.li__score span {
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.team1Live {
+  background-color: blue;
+}
+
+.team2Live {
+  background-color: orange;
+}
+
+.vs {
+  color: black;
+}
+
+footer {
+  height: 300px;
 }

@@ -14,11 +14,13 @@ export default function ({ matchLive, displayMatch }: MatchLiveProps) {
   return (
     <li>
       <a onClick={() => displayMatch(`http://127.0.0.1:5000/api/match/${matchLive.id}-${matchLive.team1}-${matchLive.team2}-${matchLive.event}`, matchLive)}>
-        <div className="li__event"> 
-          <div>{matchLive.event}</div>
-        </div>
-        <div className="li__score">
-          {matchLive.team1} V/S {matchLive.team2}
+        <div className="li__div">
+          <div className="li__event">
+            <div>{matchLive.event}</div>
+          </div>
+          <div className="li__score">
+            <span className="team1Live">{matchLive.team1}</span><span className="vs">V/S</span><span className="team2Live">{matchLive.team2}</span>
+          </div>
         </div>
       </a>
     </li>
