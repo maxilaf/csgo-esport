@@ -14,7 +14,11 @@ export type MatchLiveType = {
   event: string;
 };
 
-export default function MatchForm() {
+type MatchFormProps = {
+  displayMatch: (url: string, matchLive: MatchLiveType) => void;
+}
+
+export default function MatchForm({ displayMatch } : MatchFormProps) {
   // state
   const [matchesLive, setMatchesLive] = useState<MatchLiveType[] | null>(null);
 
@@ -42,15 +46,24 @@ export default function MatchForm() {
 
   const afficherMatchLive = () => {
     if (matchesLive === null) {
-      return "Il n'y a pas de MATCH CS:GO en LIVE pour l'instant :/ Reviens plus tard !";
+      return (
+        <p>
+          Il n'y a pas de MATCH CS:GO en LIVE pour l'instant :/ Reviens plus
+          tard !"
+        </p>
+      );
     } else {
-      return matchesLive?.map((matchLive: MatchLiveType) => {
-        return <MatchLive matchLive={matchLive} />;
-      });
+      return (
+        <ul>
+          {matchesLive?.map((matchLive: MatchLiveType) => {
+            return <MatchLive key={matchLive.id} matchLive={matchLive} displayMatch={displayMatch} />;
+          })}
+        </ul>
+      );
     }
   };
 
   // affichage
 
-  return <ul>{afficherMatchLive()}</ul>;
+  return <div>{afficherMatchLive()}</div>;
 }

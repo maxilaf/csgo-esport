@@ -56,6 +56,7 @@ header div, header a {
   background-image: url("../img/img-fond-csgo-bleu.png");
   background-size: cover;
   background-position: center;
+  background-repeat: repeat;
   height: 603px;
   color: white;
 }

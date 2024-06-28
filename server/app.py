@@ -12,14 +12,11 @@ async def fetchLive_matches():
     hltv.close()
     return matches
 
-async def fetchMatch():
+async def fetchMatch(id, team1, team2, event):
     hltv = Hltv()
-    matches_info = []
-    for match in await hltv.get_matches(future=False, min_rating=0, days=1):
-        matches = await hltv.get_match_info(match["id"], match["team1"], match["team2"], match["event"])
-        matches_info.append(matches)
+    match = await hltv.get_match_info(id, team1, team2, event)
     hltv.close()
-    return matches
+    return match
 
 async def fetchLenMatches():
     hltv = Hltv()
@@ -32,9 +29,9 @@ def live_matches():
     dataLive_matches = asyncio.run(fetchLive_matches())
     return jsonify(dataLive_matches)
 
-@app.route("/api/matches")
-def match_data():
-    dataMatch = asyncio.run(fetchMatch())
+@app.route("/api/match/<id>-<team1>-<team2>-<event>")
+def match_data(id, team1, team2, event):
+    dataMatch = asyncio.run(fetchMatch(id, team1, team2, event))
     return jsonify(dataMatch)
 
 @app.route("/api/matches_len")
