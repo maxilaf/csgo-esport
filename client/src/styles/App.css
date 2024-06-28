@@ -47,7 +47,7 @@ header div, header a {
   display: inline-block;
   margin-right: 20px;
   text-align: end;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 
@@ -98,7 +98,7 @@ header div, header a {
 
 .matchForm__liste li {
   background-color: white;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 5px;
   margin: 20px;
   box-shadow: 0px 6px 25px rgba(255, 255, 255, 0.5);
@@ -116,12 +116,23 @@ header div, header a {
   margin: 10px;
 }
 
-.li__score {
+/* .li__score {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 2px;
   margin-top: 3px;
+} */
+
+.li__score {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  margin: 5px 100px;
+}
+
+.li_event span {
+  font-weight: 1000;
 }
 
 .li__score span {

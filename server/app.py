@@ -8,21 +8,19 @@ CORS(app)
 
 async def fetchLive_matches():
     hltv = Hltv()
-    matches = await hltv.get_matches(future=False, min_rating=0, days=1)
-    hltv.close()
+    try:
+        matches = await hltv.get_matches(future=False, min_rating=0, days=1)
+    finally:
+        await hltv.close()
     return matches
 
 async def fetchMatch(id, team1, team2, event):
     hltv = Hltv()
-    match = await hltv.get_match_info(id, team1, team2, event)
-    hltv.close()
+    try:
+        match = await hltv.get_match_info(id, team1, team2, event)
+    finally:
+        await hltv.close()
     return match
-
-async def fetchLenMatches():
-    hltv = Hltv()
-    matchesLen = len(await hltv.get_matches(future=False, min_rating=0, days=1))
-    hltv.close()
-    return matchesLen
 
 @app.route("/api/live_matches")
 def live_matches(): 
@@ -34,10 +32,6 @@ def match_data(id, team1, team2, event):
     dataMatch = asyncio.run(fetchMatch(id, team1, team2, event))
     return jsonify(dataMatch)
 
-@app.route("/api/matches_len")
-def match_len():
-    dataLenMatch = asyncio.run(fetchLenMatches())
-    return jsonify(dataLenMatch)
     
 if __name__ == "__main__":
     app.run(debug=True)
